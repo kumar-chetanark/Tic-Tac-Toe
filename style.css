@@ -1,0 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/22d2ab87-13e0-4675-b4b5-30ce19e6cc8d/del4bkf-8581436e-9259-499c-bd64-73aedb306eeb.jpg/v1/fill/w_1280,h_720,q_75,strp/gaming_wallpaper_by_shashwat6276_del4bkf-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvMjJkMmFiODctMTNlMC00Njc1LWI0YjUtMzBjZTE5ZTZjYzhkXC9kZWw0YmtmLTg1ODE0MzZlLTkyNTktNDk5Yy1iZDY0LTczYWVkYjMwNmVlYi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.cLVUtkDFj5C-crOMlIx48CCyH-VAyXRMe3vs--Cp90g);
+  background-size: cover;
+  text-align: center;
+}
+
+h1{
+    font-size: 8vmin;
+    font-weight: 600;
+    color: rgb(231, 69, 158);
+}
+
+#container {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #11ebf1;
+  border-radius: 1rem;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  border-radius: 1rem;
+  border: none;
+  font-size: 10vmin;
+  font-weight: 700;
+  background-color: #032b43;;
+}
+
+.O{
+    color: white;
+}
+
+.X{
+    color: red;
+}
+
+#reset {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+  margin-top: 30px;
+}
+
+#new {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #191913;
+  color: #fff;
+  border-radius: 1rem;
+  border: none;
+}
+
+#msg {
+  color: #fdfd4b;
+  font-size: 10vmin;
+}
+
+.msgcontainer {
+  height: 100vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hide {
+  display: none;
+}

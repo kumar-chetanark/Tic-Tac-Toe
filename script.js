@@ -1,8 +1,8 @@
 let boxes = document.querySelectorAll(".box");
 let reset = document.querySelector("#reset");
-let msgcontainer = document.querySelector("#msgcontainer");
-let newGame = document.querySelector("#new");
+let msgcontainer = document.querySelector(".msgcontainer");
 let msg = document.querySelector("#msg")
+let newGame = document.querySelector("#new");
 
 
 let turnO = true;
@@ -18,9 +18,14 @@ const win = [
     [6, 7, 8],
 ];
 
+const newg = () => {
+    turnO = true;
+    enableboxes();
+    msgcontainer.classList.add("hide");
+}
+
 boxes.forEach( (box) => {
     box.addEventListener("click", () =>{
-        console.log("box was clicked");
         if (turnO){
             box.innerText = "O";
             box.classList.add("O")
@@ -37,9 +42,23 @@ boxes.forEach( (box) => {
     });
 });
 
+const disableboxes = () => {
+    for (let box of boxes) {
+        box.disabled = true;
+    }
+}
+
+const enableboxes = () => {
+    for (let box of boxes) {
+        box.disabled = false;
+        box.innerText = "";
+    }
+}
+
 const showWinner = (winner) => {
     msg.innerText = `Winner ${winner}`;
     msgcontainer.classList.remove("hide");
+    disableboxes()
 }
 
 const winner = () => {
@@ -49,9 +68,31 @@ const winner = () => {
             let pos3 = boxes[pattern[2]].innerText;
              
             if(pos1 !="" && pos2 !="" && pos3 !="") {
-                if(pos1 === pos2 && pos2 === pos3)
-                    console.log("Winner", pos1);
-                    showWinner(pos1 === pos2 && pos2 === pos3);
+                if(pos1 === pos2 && pos2 === pos3) {
+                    showWinner(pos1);
+                }
             }
     };
 };
+
+newGame.addEventListener("click", newg);
+reset.addEventListener("click", newg);
+
+let press = 0;
+
+boxes.forEach( (box) => {
+    box.addEventListener("click", () => {
+        press++;
+        if(press === 9) {
+            draw();
+        }
+    });
+});
+
+const draw = () => {
+    msg.innerText = "Draw";
+    msgcontainer.classList.remove("hide");
+    disableboxes();
+}
+
+
